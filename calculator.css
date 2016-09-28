@@ -1,0 +1,91 @@
+body {
+    background-image: url("vintage.jpg");
+    background-repeat: repeat;
+}
+
+.calc-body {
+  max-width: 250px;
+  margin:10 auto;
+  border-style: hidden;
+  border-radius: 2px;
+  background-color: #f6ebba;
+  padding: 10;
+}
+    .text-box {
+      width: 220px;
+      height: 40px;
+      border-style: hidden;
+      border-radius: 2px;
+      background-color: #A4AF8F;
+     margin: auto;
+    } 
+   .text-space {
+     text-align: right;
+      font-family: "Digital", sans-serif;
+      font-size: 280%;
+      position: relative;
+      top: -10;
+     left: -5;
+     }
+  .buttons-body {
+    margin:auto;
+    padding: 20px;
+    max-width: 250px;
+   
+  }
+    .row {
+      
+    }
+    .red-button {
+      font-family: Lato, sans-serif;
+      float: right;
+      font-weight: 600;
+      text-align: center;
+      color: beige;
+      padding: 5px;
+      min-height: 25px;
+      max-height: 25px;
+      min-width: 80px;
+      max-width: 80px;
+      margin: 5px;
+      border-style: hidden;
+      border-radius: 2px;
+      background-color: darkred; 
+    }
+ 
+    .delete-button {
+      font-family: Lato, sans-serif;
+      font-weight: 600;
+      text-align: center;
+      color: #090B0C; 
+      padding: 5px;
+      min-height: 25px;
+      max-height: 25px;
+      min-width: 80px;
+      max-width: 80px;
+      margin: 5px;
+      border-style: hidden;
+      border-radius: 2px;
+      background-color: darkgray; 
+    }
+    .gray-button {
+      font-family: Lato, sans-serif;
+      font-weight: 600;
+      text-align: center;
+      color: #090B0C; 
+      padding: 5px;
+      min-height: 20px;
+      max-height: 25px;
+      min-width: 30px;
+      max-width: 45px;
+      margin: 5px;
+      border-style: hidden;
+      border-radius: 2px;
+      background-color: darkgray; 
+    }
+    
+
+@font-face {
+    font-family: "Digital";
+    src: url(digital-7.ttf) format("truetype");
+}
