@@ -81,7 +81,7 @@ body {
       background-color: darkgray;
     }
 
-    @media screen and (max-width: 1081px) {
+    @media screen and (max-width: 800px) {
       .calc-body {
         max-width: 98%;
         height: 98%;
