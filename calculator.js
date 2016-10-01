@@ -34,10 +34,10 @@ for (let i=0;i<10;i++) {
     $("#input").fadeOut(50).fadeIn(50);
     if (input.innerHTML === "0" || first.length === 0) {
       input.innerHTML = i;
-    } else if (input.innerHTML.length < 11) { 
+    } else if (input.innerHTML.length < 11) {
     input.innerHTML = input.innerHTML + i;
     }
-     first = first + i.toString(); 
+     first = first + i.toString();
   });
 }
 
@@ -76,7 +76,7 @@ $("#del").click(function() {
     first = "";
   } else if (result.toString() === input.innerHTML) {
     input.innerHTML = input.innerHTML.slice(0, -1);
-    result = parseFloat(input.innerHTML); 
+    result = parseFloat(input.innerHTML);
   } else {
     input.innerHTML = input.innerHTML.slice(0, -1);
     first = first.slice(0, -1);
@@ -88,14 +88,17 @@ $("#del").click(function() {
 // This function will make sure that the result will fit the screen
 
 function results() {
-  if (result.toString().indexOf(".") != -1) { 
+  var lastChar = result.toString().charAt(result.toString.length -1);
+  if (result.toString().indexOf(".") != -1) {
     input.innerHTML = result.toFixed(10 - result.toString().indexOf("."));
-    if (input.innerHTML.slice(-1) === 0) {
-      input.innerHTML.slice(0, -1);
-    }
     result = parseFloat(input.innerHTML);
-    } else {input.innerHTML = result}
-}
+  }
+   if (lastChar === "0") {
+   result = result.toString().slice(0, -1);
+   results();
+ } else {input.innerHTML = result;}
+ }
+
 
 // ------------
 
@@ -129,7 +132,7 @@ $("#" + operatorsKeys[i]).click(function() {
 }
 
 // ------------
- 
+
 
 
 // Assign function for the equal button
@@ -137,7 +140,7 @@ $("#" + operatorsKeys[i]).click(function() {
 $("#equal").click(function() {
   if (operand === "") {
     input.innerHTML = 0;
-  } 
+  }
    $("#input").fadeOut(50).fadeIn(50);
   if (second.length === 0) {
   second = parseFloat(first);
@@ -146,7 +149,7 @@ $("#equal").click(function() {
     result = operators[operand](second, parseFloat(first));
     results();
   } else if (second = "non" && first.length === 0) {
-    results();  
+    results();
   } else if(second = "non" && first.length > 0) {
     result = operators[operand](result, parseFloat(first));
     results();

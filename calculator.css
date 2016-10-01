@@ -1,41 +1,41 @@
+
+
+
 body {
     background-image: url("vintage.jpg");
     background-repeat: repeat;
 }
 
 .calc-body {
-  max-width: 300px;
-  margin:10 auto;
+  max-width: 30%;
+  margin:0.5%;
   border-style: hidden;
   border-radius: 2px;
   background-color: #f6ebba;
-  padding: 10;
+  padding: 1%;
 }
     .text-box {
-      width: 220px;
-      height: 40px;
+      width: 85%;
+      min-height: 1%;
       border-style: hidden;
       border-radius: 2px;
       background-color: #A4AF8F;
-     margin: auto;
-    } 
+      margin: 1% auto;
+    }
    .text-space {
      text-align: right;
       font-family: "Digital", sans-serif;
-      font-size: 280%;
+      font-size: 2.9em;
       position: relative;
-      top: -10;
+      top: 0;
      left: -5;
      }
   .buttons-body {
-    margin:auto;
-    padding: 20px;
-    max-width: 250px;
-   
+    margin:1%;
+    padding: 1%;
+    max-width: 98%;
   }
-    .row {
-      
-    }
+
     .red-button {
       font-family: Lato, sans-serif;
       float: right;
@@ -50,14 +50,14 @@ body {
       margin: 5px;
       border-style: hidden;
       border-radius: 2px;
-      background-color: darkred; 
+      background-color: darkred;
     }
- 
+
     .delete-button {
       font-family: Lato, sans-serif;
       font-weight: 600;
       text-align: center;
-      color: #090B0C; 
+      color: #090B0C;
       padding: 5px;
       min-height: 25px;
       max-height: 25px;
@@ -66,24 +66,45 @@ body {
       margin: 5px;
       border-style: hidden;
       border-radius: 2px;
-      background-color: darkgray; 
+      background-color: darkgray;
     }
     .gray-button {
       font-family: Lato, sans-serif;
       font-weight: 600;
       text-align: center;
-      color: #090B0C; 
-      padding: 5px;
-      min-height: 20px;
-      max-height: 25px;
-      min-width: 30px;
-      max-width: 45px;
-      margin: 5px;
+      color: #090B0C;
+      padding: 2%;
+      max-height: 30%;
+      width: 21%;
+      margin: 2%;
       border-style: hidden;
       border-radius: 2px;
-      background-color: darkgray; 
+      background-color: darkgray;
     }
-    
+
+    @media only screen and (max-width: 1081px) {
+      .calc-body {
+        max-width: 98%;
+        height: 98%;
+        margin:0.5%;
+        border-style: hidden;
+        border-radius: 2px;
+        background-color: #f6ebba;
+        padding: 1%;
+      }
+
+      .gray-button {
+
+        font-size: 10vw;
+        text-align: center;
+        color: #090B0C;
+        padding: 1%;
+        height: 20%;
+        width: 23%;
+        margin: 1%;
+      }
+
+    }
 
 @font-face {
     font-family: "Digital";
