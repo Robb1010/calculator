@@ -12,7 +12,7 @@ body {
   border-style: hidden;
   border-radius: 2px;
   background-color: #f6ebba;
-  padding: 0.5%;
+  padding: 1%;
 }
     .text-box {
       width: 98%;
@@ -97,10 +97,10 @@ body {
         font-size: 10vh;
         text-align: center;
         color: #090B0C;
-        padding: 0.5%;
+        padding: 1%;
         height: 18%;
-        width: 21%;
-        margin: 0.5%;
+        width: 22.5%;
+        margin: 1%;
       }
 
     }
