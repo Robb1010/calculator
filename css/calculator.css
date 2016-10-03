@@ -2,7 +2,7 @@
 
 
 body {
-    background-image: url("vintage.jpg");
+    background-image: url("../images/vintage.jpg");
     background-repeat: repeat;
 }
 
@@ -107,5 +107,5 @@ body {
 
 @font-face {
     font-family: "Digital";
-    src: url(digital-7.ttf) format("truetype");
+    src: url(../fonts/digital-7.ttf) format("truetype");
 }
