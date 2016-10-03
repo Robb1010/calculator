@@ -90,7 +90,7 @@ $("#del").click(function() {
 function results() {
   var lastChar = result.toString().charAt(result.toString.length -1);
   if (result.toString().indexOf(".") != -1) {
-    input.innerHTML = result.toFixed(10 - result.toString().indexOf("."));
+    input.innerHTML = result.toFixed(9 - result.toString().indexOf("."));
     result = parseFloat(input.innerHTML);
   }
    if (lastChar === "0") {
