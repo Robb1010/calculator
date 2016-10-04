@@ -7,7 +7,7 @@ body {
 }
 
 .calc-body {
-  max-width: 30%;
+  width: 30%;
   margin:0.5%;
   border-style: hidden;
   border-radius: 2px;
@@ -31,41 +31,35 @@ body {
      left: -5;
      }
   .buttons-body {
+    max-height: 70%;
     margin:1%;
     padding: 1%;
     width: 98%;
   }
 
-    .red-button {
+    .cleardel-button {
       font-family: Lato, sans-serif;
-
+      margin: 1%;
       font-weight: 600;
       text-align: center;
-      color: beige;
-      padding: 5px;
-      min-height: 25px;
-      max-height: 25px;
+      padding: 1%;
+      max-height: 10%;
       min-width: 80px;
       max-width: 80px;
       border-style: hidden;
       border-radius: 2px;
-      background-color: darkred;
     }
 
-    .delete-button {
-      font-family: Lato, sans-serif;
-      font-weight: 600;
-      text-align: center;
+    #del {
+      float: left;
       color: #090B0C;
-      padding: 5px;
-      min-height: 25px;
-      max-height: 25px;
-      min-width: 80px;
-      max-width: 80px;
-      margin: 5px;
-      border-style: hidden;
-      border-radius: 2px;
       background-color: darkgray;
+    }
+
+    #on {
+      float: right;
+      color: beige;
+      background-color: darkred;
     }
     .gray-button {
       font-family: Lato, sans-serif;
@@ -73,9 +67,9 @@ body {
       text-align: center;
       color: #090B0C;
       padding: 2%;
-      max-height: 30%;
+      max-height: 21%;
       width: 21%;
-      margin: 2%;
+      margin: 1%;
       border-style: hidden;
       border-radius: 2px;
       background-color: darkgray;
@@ -83,7 +77,7 @@ body {
 
     @media screen and (max-width: 1441px) {
       .calc-body {
-        max-width: 98%;
+        width: 95%;
         height: 98%;
         margin:0.5%;
         border-style: hidden;
@@ -92,13 +86,18 @@ body {
         padding: 1%;
       }
 
+      .cleardel-button {
+        height: 10%;
+        width: 22.5%;
+        margin-right: 2%;
+      }
       .gray-button {
 
         font-size: 10vh;
         text-align: center;
         color: #090B0C;
         padding: 1%;
-        height: 18%;
+        height: 16.5%;
         width: 22.5%;
         margin: 1%;
       }
