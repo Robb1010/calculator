@@ -45,7 +45,7 @@ for (let i=0;i<10;i++) {
 
 // Assign the clear function to the ON and CE buttons
 
-$(".red-button").click(function () {
+$("#on").click(function () {
   $("#input").fadeOut(50).fadeIn(50);
   input.innerHTML = "0";
   first = "";
