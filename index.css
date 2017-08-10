@@ -1,4 +1,5 @@
 body {
+  overflow-y: hidden;
   margin: 0;
   padding: 0;
   font-family: Lato, sans-serif;
@@ -27,6 +28,7 @@ body {
 
 .display{
   display: flex;
+  padding-right: 5px;
   justify-content: flex-end;
   align-items: center;
   font-size: 3.5rem;
@@ -141,11 +143,176 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  body {
-    overflow-y: hidden;
-  }
   .container {
     height: 100vh;
     width: 100vw;
 }
+}
+
+@media all  and (orientation: landscape) {
+
+  .container {
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .display {
+    grid-column: 3 / span 4;
+    grid-row: 1/1;
+  }
+
+  .dot {
+    grid-column: 1 / 1;
+    grid-row: 4/ 4;
+  }
+
+.zero {
+  grid-column: 2 / 2;
+  grid-row: 4/ 4;
+}
+
+.one {
+  grid-column: 1 / span 1;
+  grid-row: 3/3;
+}
+
+.two {
+  grid-column: 2 / span 1;
+  grid-row: 3/3;
+}
+
+.three {
+    grid-column: 3 / span 1;
+    grid-row: 3/3;
+}
+
+.four {
+  grid-column: 4 / span 1;
+  grid-row: 3/3;
+}
+
+.five {
+  grid-column: 5 / span 1;
+  grid-row: 3/3;
+}
+
+.six {
+  grid-column: 1 / span 1;
+  grid-row: 2/2;
+}
+
+.seven {
+  grid-column: 2 / span 1;
+  grid-row: 2/2;
+}
+
+.eight {
+  grid-column: 3 / span 1;
+  grid-row: 2/2;
+}
+
+.nine {
+  grid-column: 4 / span 1;
+  grid-row: 2/2;
+}
+
+.equal {
+  grid-column: 3 / span 2;
+  grid-row: 4/4;
+  background-color: #121212;
+}
+
+.clear {
+  grid-column: 1 / 1;
+  grid-row: 1/1;
+  background-color: #ba0003;
+  font-size: 2.8rem;
+}
+
+.del{
+  grid-column: 2 / 2;
+  grid-row: 1/1;
+  background-color: #ba0003;
+  font-size: 2.8rem;
+}
+
+.plus {
+  grid-column: 6/6;
+  grid-row: 3/span 2;
+  background-color: #121212;
+}
+
+.minus {
+  grid-column: 5/5;
+  grid-row: 4/4;
+  background-color: #121212;
+}
+
+.divide {
+  grid-column: 5/5;
+  grid-row: 2/2;
+  background-color: #121212;
+}
+
+.multiply {
+  grid-column: 6/6;
+  grid-row: 2/2;
+  background-color: #121212;
+}
+
+}
+
+@media only screen and (max-width: 321px) {
+  .display {
+    font-size: 3rem;
+  }
+}
+
+
+button{
+  background-color: #262525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-size: 4rem;
+  border: none;
+  outline: none;
+}
+
+button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+button:focus:not(:active)::after {
+  animation: ripple 0.3s ease-out;
 }
